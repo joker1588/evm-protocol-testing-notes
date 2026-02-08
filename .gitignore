@@ -1,0 +1,36 @@
+# Foundry
+out/
+cache/
+cache_hardhat/
+cache_forge/
+
+# Dependencies
+lib/
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build artifacts
+artifacts/
+typechain/
+typechain-types/
+
+# !!! CRITICAL: Real vulnerability reports - NEVER commit !!!
+Final_Reports/
+**/Final_Reports/

@@ -1,0 +1,40 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.20"
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+
+# 测试配置
+[profile.default.fuzz]
+runs = 256
+max_test_rejects = 65536
+seed = '0x3e8'
+
+[profile.default.invariant]
+runs = 256
+depth = 15
+fail_on_revert = false
+
+# Gas 报告
+gas_reports = ["*"]
+
+# 格式化
+[fmt]
+line_length = 100
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "all"
+quote_style = "double"
+number_underscore = "thousands"
+
+# RPC 端点（本地测试）
+[rpc_endpoints]
+local = "http://localhost:8545"
+
+# Etherscan API（测试用）
+[etherscan]
+localhost = { key = "test" }
